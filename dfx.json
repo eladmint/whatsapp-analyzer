@@ -1,0 +1,33 @@
+{
+  "canisters": {
+    "chat_analyzer": {
+      "main": "src/backend/main.mo",
+      "type": "motoko"
+    },
+    "chat_analyzer_assets": {
+      "dependencies": [
+        "chat_analyzer"
+      ],
+      "frontend": {
+        "entrypoint": "src/index.html"
+      },
+      "source": [
+        "dist/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
